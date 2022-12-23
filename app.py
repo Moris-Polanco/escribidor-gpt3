@@ -1,8 +1,8 @@
 import openai
+import os
 import streamlit as st
 
-# Inicializa la API de GPT-3
-openai.api_key = ""
+openai.api_key = os.getenv("OPENAI_API_KEY")
 
 # Crea un título y una caja de texto para que el usuario pueda escribir lo que quiera que GPT-3 escriba
 st.title("Escribidor de GPT-3")
